@@ -327,7 +327,7 @@ func rekeyCertificateAction(ctx *cli.Context) error {
 		if _, err := renewer.Rekey(priv, outCert, outKey); err != nil {
 			return err
 		}
-		ui.Printf("Your certificate and key has been saved in %s %s .\n", outCert, outKey)
+
 
 	} else {
 		priv, err := pemutil.Read(givenPrivate)
@@ -337,8 +337,8 @@ func rekeyCertificateAction(ctx *cli.Context) error {
 		if _, err := renewer.Rekey(priv, outCert, outKey); err != nil {
 			return err
 		}
-		ui.Printf("Your certificate and key has been saved in %s %s .\n", outCert, outKey)
-
 	}
+	
+	ui.Printf("Your certificate and key has been saved in %s %s .\n", outCert, outKey)
 	return afterRenew()
 }
