@@ -8,8 +8,6 @@ import (
 	"github.com/pkg/errors"
 	"github.com/smallstep/certificates/ca"
 	"github.com/smallstep/certificates/pki"
-	"github.com/smallstep/cli/command"
-	"github.com/smallstep/cli/config"
 	"github.com/smallstep/cli/crypto/pemutil"
 	"github.com/smallstep/cli/errs"
 	"github.com/smallstep/cli/flags"
@@ -18,6 +16,8 @@ import (
 	"github.com/smallstep/cli/utils/cautils"
 	"github.com/smallstep/truststore"
 	"github.com/urfave/cli"
+	"go.step.sm/cli-utils/command"
+	"go.step.sm/cli-utils/config"
 )
 
 func bootstrapCommand() cli.Command {
@@ -25,7 +25,7 @@ func bootstrapCommand() cli.Command {
 		Name:   "bootstrap",
 		Action: command.ActionFunc(bootstrapAction),
 		Usage:  "initialize the environment to use the CA commands",
-		UsageText: `**step ca bootstrap** 
+		UsageText: `**step ca bootstrap**
 [**--ca-url**=<uri>] [**--fingerprint**=<fingerprint>] [**--install**]
 [**--team**=name] [**--team-url**=url] [**--redirect-url**=<url>]`,
 		Description: `**step ca bootstrap** downloads the root certificate from the certificate

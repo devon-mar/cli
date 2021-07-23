@@ -5,8 +5,8 @@ import (
 
 	"github.com/urfave/cli"
 
-	"github.com/smallstep/cli/command"
-	"github.com/smallstep/cli/config"
+	"go.step.sm/cli-utils/command"
+	"go.step.sm/cli-utils/config"
 )
 
 func init() {

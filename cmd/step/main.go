@@ -12,18 +12,19 @@ import (
 	"time"
 
 	"github.com/smallstep/certificates/ca"
-	"github.com/smallstep/cli/command"
 	"github.com/smallstep/cli/command/version"
-	"github.com/smallstep/cli/config"
 	"github.com/smallstep/cli/errs"
 	"github.com/smallstep/cli/usage"
 	"github.com/urfave/cli"
+	"go.step.sm/cli-utils/command"
+	"go.step.sm/cli-utils/config"
 
 	// Enabled commands
 	_ "github.com/smallstep/cli/command/base64"
 	_ "github.com/smallstep/cli/command/beta"
 	_ "github.com/smallstep/cli/command/ca"
 	_ "github.com/smallstep/cli/command/certificate"
+	_ "github.com/smallstep/cli/command/context"
 	_ "github.com/smallstep/cli/command/crypto"
 	_ "github.com/smallstep/cli/command/fileserver"
 	_ "github.com/smallstep/cli/command/oauth"
